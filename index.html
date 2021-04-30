@@ -27,41 +27,38 @@
     </select>
 
   </div>
-  <div class="timebox">
+  <div data-timezone="America/Los_Angeles" class="timebox">
     <h2>Seattle, WA</h2>
-    <p id="pst-time"></p>
+    <!-- <p id="pst-time"></p> -->
     <div id="seattle-result"></div>
+    <output>00:00</output>
   </div>
-  <div class="timebox">
+  <div data-timezone="America/Chicago" class="timebox">
     <h2>Dallas, TX</h2>
-    <p id="ct-time"></p>
+    <!-- <p id="ct-time"></p> -->
     <div id="dallas-result"></div>
+    <output>00:00</output>
   </div>
-  <div class="timebox">
+  <div data-timezone="America/Cancun" class="timebox">
     <h2>Playa del Carmen, MX</h2>
-    <p id="mx-time"></p>
+    <!-- <p id="mx-time"></p> -->
     <div id="playa-result"></div>
+    <output>00:00</output>
   </div>
-  <div class="timebox">
+  <div data-timezone="America/New_York" class="timebox">
     <h2>Stratham, NH</h2>
-    <p id="est-time"></p>
+    <!-- <p id="est-time"></p> -->
     <div id="stratham-result"></div>
+    <output>00:00</output>
   </div>
-  <div class="timebox">
+  <div data-timezone="Europe/Paris" class="timebox">
     <h2>Paris, FR</h2>
-    <p id="cet-time"></p>
+    <!-- <p id="cet-time"></p> -->
     <div id="paris-result"></div>
+    <output>00:00</output>
   </div>
 
-
-  <!-- <h2>Seattle</h2>
-  <p>09:00 AM</p>
-  <h2>Texas/Mexico</h2>
-  <p>11:00 AM</p>
-  <h2>Boston</h2>
-  <p>12:00 PM</p>
-  <h2>Paris</h2>
-  <p>06:00 PM</p> -->
   
+  <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
 </body>
 </html>

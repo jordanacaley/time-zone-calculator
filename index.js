@@ -1,3 +1,29 @@
+const now = luxon.DateTime.now().setZone("Europe/Paris");
+
+console.log(now.toFormat("HH:mm"));
+
+const locations = document.querySelectorAll(".timebox");
+
+const updateTimes = function() {
+  locations.forEach(location => {
+    const output = location.querySelector("output");
+    const timezone = location.getAttribute("data-timezone");
+
+    const now = luxon.DateTime.now().setZone(timezone);
+
+    output.innerHTML = now.toFormat("HH:mm");
+  })
+}
+
+updateTimes()
+
+setInterval(function () {
+  updateTimes()
+}, 1000)
+
+
+// Luxon above
+
 const selectElement = document.querySelector('.cities');
 const seattleResult = document.getElementById("seattle-result");
 const dallasResult = document.getElementById("dallas-result");
@@ -30,39 +56,39 @@ endTime.addEventListener("input", function() {
 
 
 
-// Show current times //
+// // Show current times //
 
-const getPstTime = function() {
-  document.getElementById('pst-time').innerHTML = new Date().toLocaleString("en-US",{timeZone:'PST',timeStyle:'short',hourCycle:'h12'});
-}
+// const getPstTime = function() {
+//   document.getElementById('pst-time').innerHTML = new Date().toLocaleString("en-US",{timeZone:'PST',timeStyle:'short',hourCycle:'h12'});
+// }
 
-getPstTime();
-setInterval(getPstTime,1000);
+// getPstTime();
+// setInterval(getPstTime,1000);
 
-const getCtTime = function() {
-  document.getElementById('ct-time').innerHTML = new Date().toLocaleString("en-US",{timeZone:'CST',timeStyle:'short',hourCycle:'h12'});
-}
+// const getCtTime = function() {
+//   document.getElementById('ct-time').innerHTML = new Date().toLocaleString("en-US",{timeZone:'CST',timeStyle:'short',hourCycle:'h12'});
+// }
 
-getCtTime();
-setInterval(getCtTime,1000);
+// getCtTime();
+// setInterval(getCtTime,1000);
 
-const getMxTime = function() {
-  document.getElementById('mx-time').innerHTML = new Date().toLocaleString("en-US",{timeZone:'America/Mexico_City',timeStyle:'short',hourCycle:'h12'});
-}
+// const getMxTime = function() {
+//   document.getElementById('mx-time').innerHTML = new Date().toLocaleString("en-US",{timeZone:'America/Mexico_City',timeStyle:'short',hourCycle:'h12'});
+// }
 
-getMxTime();
-setInterval(getMxTime,1000);
+// getMxTime();
+// setInterval(getMxTime,1000);
 
-const getEstTime = function() {
-  document.getElementById('est-time').innerHTML = new Date().toLocaleString("en-US",{timeZone:'America/New_York',timeStyle:'short',hourCycle:'h12'});
-}
+// const getEstTime = function() {
+//   document.getElementById('est-time').innerHTML = new Date().toLocaleString("en-US",{timeZone:'America/New_York',timeStyle:'short',hourCycle:'h12'});
+// }
 
-getEstTime();
-setInterval(getEstTime,1000);
+// getEstTime();
+// setInterval(getEstTime,1000);
 
-const getCetTime = function() {
-  document.getElementById('cet-time').innerHTML = new Date().toLocaleString("en-US",{timeZone:'CET',timeStyle:'short',hourCycle:'h12'});
-}
+// const getCetTime = function() {
+//   document.getElementById('cet-time').innerHTML = new Date().toLocaleString("en-US",{timeZone:'CET',timeStyle:'short',hourCycle:'h12'});
+// }
 
-getCetTime();
-setInterval(getCetTime,1000);
+// getCetTime();
+// setInterval(getCetTime,1000);
