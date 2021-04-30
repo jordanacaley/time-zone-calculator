@@ -9,9 +9,15 @@
 <body>
   <h1>Time Zone Calculator</h1>
   <div>
+    
+    <label for="shift-start">Choose a start time:</label>
+    <input type="time" id="shift-start" name="shift-start" required>
+    
+    <label for="shift-end">Choose an end time:</label>
+    <input type="time" id="shift-end" name="shift-end" required>
     <label for="city-select">Choose your city:</label>
 
-    <select name="cities" id="city-select">
+    <select class="cities" name="cities" id="city-select">
       <option value="">--Please choose a city--</option>
       <option value="seattle">Seattle, WA</option>
       <option value="dallas">Dallas, TX</option>
@@ -20,28 +26,31 @@
       <option value="paris">Paris, FR</option>
     </select>
 
-    <label for="work-start">Choose a start time:</label>
-    <input type="time" id="work-start" name="work-start" value="09:00" required>
   </div>
   <div class="timebox">
     <h2>Seattle, WA</h2>
     <p id="pst-time"></p>
+    <div id="seattle-result"></div>
   </div>
   <div class="timebox">
     <h2>Dallas, TX</h2>
     <p id="ct-time"></p>
+    <div id="dallas-result"></div>
   </div>
   <div class="timebox">
     <h2>Playa del Carmen, MX</h2>
     <p id="mx-time"></p>
+    <div id="playa-result"></div>
   </div>
   <div class="timebox">
     <h2>Stratham, NH</h2>
     <p id="est-time"></p>
+    <div id="stratham-result"></div>
   </div>
   <div class="timebox">
     <h2>Paris, FR</h2>
     <p id="cet-time"></p>
+    <div id="paris-result"></div>
   </div>
 
 
